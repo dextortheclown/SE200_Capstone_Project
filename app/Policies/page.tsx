@@ -16,8 +16,11 @@ import Link from "next/link";
 import { Home, Wallet, Users2 } from "lucide-react";
 import Image from "next/image";
 import logo from "@/components/assets/Logo.png";
+import { PolicyTable } from "@/components/policies/policy-table";
+import { getPolicies } from "@/actions/getPolicies";
 
-export default function Page() {
+export default async function PoliciesPage() {
+  const policies = await getPolicies();
   return (
     <div className="flex h-screen">
       {/* Sidebar */}
@@ -64,7 +67,7 @@ export default function Page() {
       </aside>
 
       {/* Main content area */}
-      <div className="flex-1 bg-gray-200 p-6">
+      <div className="flex-1 bg-gray-200 p-6 ml-24">
         {/* Top right account dropdown */}
         <div className="flex justify-end">
           <DropdownMenu>
@@ -81,7 +84,7 @@ export default function Page() {
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
-        {/* Content goes here */}
+        <PolicyTable policies={policies}/>
       </div>
     </div>
   );
