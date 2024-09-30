@@ -14,13 +14,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Policy } from "@/components/policies/policy";
+import { PolicyHolder } from "@/components/policyHolders/policyHolder";
 import { useRouter } from "next/navigation";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
-export function PolicyTable({
+export function PolicyHolderTable({
   policies,
   offset,
 }: {
@@ -66,15 +66,16 @@ export function PolicyTable({
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Policy ID</TableHead>
-              <TableHead>Name</TableHead>
-              <TableHead>Base Price (SGD)</TableHead>
-              <TableHead>Type of Policy</TableHead>
+              <TableHead>NRIC</TableHead>
+              <TableHead>Email</TableHead>
+              <TableHead>First Name</TableHead>
+              <TableHead>Last Name	</TableHead>
+              <TableHead>Policies Held</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {policies.map((policy) => (
-              <Policy key={policy.insurance_policy_id} policy={policy} />
+              <PolicyHolder key={policy.policy_holder_id} policy={policy} />
             ))}
           </TableBody>
         </Table>

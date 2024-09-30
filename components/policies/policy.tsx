@@ -4,7 +4,7 @@ interface PolicyProps {
   policy: {
     insurance_policy_id: string;
     insurance_policy_name: string;
-    base_price_sgd: number;
+    base_price_sgd: string;
     type_of_policy: string;
   };
 }

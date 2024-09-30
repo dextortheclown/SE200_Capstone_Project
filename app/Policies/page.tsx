@@ -84,7 +84,11 @@ export default async function PoliciesPage() {
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
-        <PolicyTable policies={policies}/>
+        {Array.isArray(policies) ? (
+          <PolicyTable policies={policies} offset={0} />
+        ) : (
+          <div>Error: {policies.error}</div>
+        )}
       </div>
     </div>
   );

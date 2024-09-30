@@ -74,7 +74,7 @@ model VerificationToken {
 model insurance_policies {
   insurance_policy_id         String   @id @db.VarChar(10)
   insurance_policy_name       String?  @db.VarChar(255)
-  base_price_sgd              Decimal? @db.Decimal(10, 2)
+  base_price_sgd              String? @db.Decimal(10, 2)
   type_of_policy              String?  @db.VarChar(50)
   policy_holder_id            String?  @db.VarChar(10)
   policy_holder_email         String?  @db.VarChar(255)
