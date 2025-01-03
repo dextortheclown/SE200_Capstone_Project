@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SE200 Heicoders Academy Capstone Project
 
-## Getting Started
+## 📝 Description
+Creating a MVP (Minimum Viable Product) showcasing a mockup of a insurance company to help keep track of customers and policies. The project utilises a database to provide CRUD functionalities for the relevant user to interact with the database.
 
-First, run the development server:
+## 🔧 Technologies Used
+- **Next.js** – React-based framework for server-rendered apps
+- **TypeScript** – Strongly typed JavaScript for better maintainability
+- **Tailwind CSS** – Utility-first CSS framework for rapid UI development
+- **Shadcn/ui** – Reusable UI components
+- **Lucide Icons** – Beautiful and consistent icon library
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📂 Project Structure
+/
+├── components/         # Reusable components
+│   ├── ui/             # Shadcn UI components
+│   ├── policies/       # Policy-related components
+│
+├── pages/              # Next.js routing and pages
+│   ├── index.tsx       # Home page
+│   ├── policies/       # Policies page
+│   └── policies/add/   # Add Policy page
+│
+├── public/             # Static assets
+├── styles/             # Global styles
+└── tsconfig.json       # TypeScript configuration
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Features
+- **Dynamic Routing** – Seamless navigation between pages
+- **Responsive Design** – Fully responsive layout using TailwindCSS
+- **Pagination** – Navigate through policy listings
+- **Add Policy** – Form to add new policies to the system
+- **Reusable Components** – Modular architecture for scalability
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+---
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 🛠️ Customization
+- Customize the `tailwind.config.js` for theme adjustments.
+- Update the `tsconfig.json` for stricter TypeScript rules.
+- Modify `/components` to add new UI elements.
